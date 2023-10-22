@@ -1,0 +1,15 @@
+<div class="card-container">
+  <div class="card" *ngFor="let pokemon of pokemons">
+    <img [src]="pokemon.image" alt="pokemon" />
+    <h2>{{ pokemon.name }}</h2>
+    <p>Height: {{ pokemon.height }}</p>
+    <p>Weight: {{ pokemon.weight }}</p>
+    <p>Type: {{ pokemon.type }}</p>
+    <p>Attack Power: {{ pokemon.attack }}</p>
+    <button class="know-more-button" (click)="goToDetail(pokemon.name)">Know More</button>
+  </div>
+</div>
+
+<div class="load-more-container">
+  <button class="load-more-button" (click)="loadMore()">Load More</button>
+</div>

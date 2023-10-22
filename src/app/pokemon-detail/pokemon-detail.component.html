@@ -1,0 +1,13 @@
+<div *ngIf="pokemon">
+  <h2>{{ pokemon.name }}</h2>
+  <img [src]="pokemon.image" alt="pokemon" />
+  <p>Description: {{ pokemon.description }}</p>
+  <p>Type: {{ pokemon.type }}</p>
+  <p>Base Stats:</p>
+  <ul>
+    <li *ngFor="let stat of pokemon.baseStat">
+      {{ stat.name }}: {{ stat.value }}
+    </li>
+  </ul>
+  <p>Attacks: {{ pokemon.attacks.join(', ') }}</p>
+</div>
